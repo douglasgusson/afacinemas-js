@@ -1,8 +1,18 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "keywords": [
+    "afacinemas",
+    "scraping",
+    "cinema"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/douglasgusson/afacinemas-js.git"
+  },
+  "homepage": "https://github.com/douglasgusson/afacinemas-js.git",
   "files": [
     "dist",
     "src"
