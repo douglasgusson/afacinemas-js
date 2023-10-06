@@ -19,10 +19,7 @@
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "GitHub.copilot"
-      ]
+      "extensions": ["esbenp.prettier-vscode", "GitHub.copilot"]
     }
   }
 

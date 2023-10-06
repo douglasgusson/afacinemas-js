@@ -9,10 +9,10 @@ export class ReleasesScraper extends AfaScraper<Release> {
     this.url = `${this.baseUrl}breve_filmes.php`;
   }
 
-  async extract (): Promise<Release[]> {
+  async extract(): Promise<Release[]> {
     await this.loadContent();
 
-    let ids: number[] = [];
+    const ids: number[] = [];
     const sections = this.$('section.cartazbreve');
 
     sections.each((_index, element) => {
@@ -21,16 +21,18 @@ export class ReleasesScraper extends AfaScraper<Release> {
       ids.push(id);
     });
 
-    const releases = await Promise.all(ids.map(id => {
-      const movieScraper = new MovieScraper(id);
-      const movie = movieScraper.extract()
-      return movie
-    }));
-    
+    const releases = await Promise.all(
+      ids.map(id => {
+        const movieScraper = new MovieScraper(id);
+        const movie = movieScraper.extract();
+        return movie;
+      })
+    );
+
     return releases;
   }
 
-  private getReleaseId (item: cheerio.Cheerio<cheerio.Element>) {
+  private getReleaseId(item: cheerio.Cheerio<cheerio.Element>) {
     const id = this.$(item).attr('property');
     return Number(id!);
   }

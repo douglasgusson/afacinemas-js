@@ -1,4 +1,8 @@
-import { ReleasesScraper, SessionsScraper, TheatersScraper } from './afacinemas';
+import {
+  ReleasesScraper,
+  SessionsScraper,
+  TheatersScraper,
+} from './afacinemas';
 export { Movie, Release, Theater } from './afacinemas/types';
 
 export const getTheaters = async () => {
@@ -14,7 +18,7 @@ export const getReleases = async () => {
 };
 
 /**
- * @param theaterId 
+ * @param theaterId
  * @param sessionsDate format: YYYY-MM-DD
  */
 export const getSessions = async (theaterId: number, sessionsDate: string) => {

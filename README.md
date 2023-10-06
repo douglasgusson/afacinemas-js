@@ -1,4 +1,5 @@
 # afacinemas.js 🎥
+
 > A web scraper library for [AFA Cinemas](http://www.afacinemas.com.br/)
 
 [![npm version](https://badge.fury.io/js/afacinemas.svg)](https://badge.fury.io/js/afacinemas)
@@ -15,7 +16,7 @@ npm install afacinemas
 ### ES6
 
 ```javascript
-import { getTheaters, getReleases } from "afacinemas";
+import { getTheaters, getReleases } from 'afacinemas';
 
 Promise.all([getTheaters(), getReleases()]).then(([theaters, releases]) => {
   console.log(theaters);
@@ -26,7 +27,7 @@ Promise.all([getTheaters(), getReleases()]).then(([theaters, releases]) => {
 ### CommonJS
 
 ```javascript
-const { getTheaters, getReleases } = require("afacinemas");
+const { getTheaters, getReleases } = require('afacinemas');
 
 Promise.all([getTheaters(), getReleases()]).then(([theaters, releases]) => {
   console.log(theaters);
@@ -41,7 +42,7 @@ Promise.all([getTheaters(), getReleases()]).then(([theaters, releases]) => {
 Fetches the list of theaters.
 
 ```javascript
-import { getTheaters } from "afacinemas";
+import { getTheaters } from 'afacinemas';
 
 getTheaters().then(theaters => {
   console.log(theaters);
@@ -53,7 +54,7 @@ getTheaters().then(theaters => {
 Fetches the list of next releases.
 
 ```javascript
-import { getReleases } from "afacinemas";
+import { getReleases } from 'afacinemas';
 
 getReleases().then(releases => {
   console.log(releases);
@@ -65,9 +66,9 @@ getReleases().then(releases => {
 Fetches the list of sessions for a given theater and date.
 
 ```javascript
-import { getSessions } from "afacinemas";
+import { getSessions } from 'afacinemas';
 
-getSessions(12, "2023-09-20").then(sessions => {
+getSessions(12, '2023-09-20').then(sessions => {
   console.log(sessions);
 });
 ```

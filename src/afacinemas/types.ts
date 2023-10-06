@@ -12,21 +12,21 @@ export type Movie = {
   description: string;
   classification: string;
   duration: string;
-}
+};
 
 export type Release = Movie & {
   releaseDate: string;
   trailerUrl: string;
-}
+};
 
 export type Session = {
   room: string;
   time: string;
   audio: string;
   image: string;
-}
+};
 
 export type MovieWithSessions = Movie & {
   genre: string;
   sessions: Session[];
-}
+};

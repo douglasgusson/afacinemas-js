@@ -6,9 +6,7 @@ export interface IHttpClient {
 }
 
 export class HttpClient implements IHttpClient {
-  constructor(
-    private readonly httpClient: AxiosInstance
-  ) {}
+  constructor(private readonly httpClient: AxiosInstance) {}
 
   async get<T = unknown>(url: string): Promise<T> {
     const { data } = await this.httpClient.get(url);
@@ -16,6 +14,4 @@ export class HttpClient implements IHttpClient {
   }
 }
 
-export const httpClient = new HttpClient(
-  setupCache(Axios)
-);
+export const httpClient = new HttpClient(setupCache(Axios));
