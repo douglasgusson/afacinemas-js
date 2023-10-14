@@ -4,6 +4,7 @@
 
 [![npm version](https://badge.fury.io/js/afacinemas.svg)](https://badge.fury.io/js/afacinemas)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![NPM Downloads](https://badgen.net/npm/dm/afacinemas)](https://www.npmjs.com/package/afacinemas)
 
 ## Installation
 
