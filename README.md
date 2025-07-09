@@ -73,3 +73,15 @@ getSessions(12, '2023-09-20').then(sessions => {
   console.log(sessions);
 });
 ```
+
+### getMovie(id)
+
+Fetches the details of a movie by its ID.
+
+```javascript
+import { getMovie } from 'afacinemas';
+
+getMovie(900).then(movie => {
+  console.log(movie);
+});
+```
