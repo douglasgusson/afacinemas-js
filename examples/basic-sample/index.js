@@ -1,4 +1,9 @@
-const { getReleases, getSessions, getTheaters } = require('afacinemas');
+const {
+  getReleases,
+  getSessions,
+  getTheaters,
+  getMovie,
+} = require('afacinemas');
 
 getTheaters().then(theaters => {
   console.log(JSON.stringify(theaters, null, 2));
@@ -10,4 +15,8 @@ getReleases().then(releases => {
 
 getSessions(10, '2023-10-06').then(sessions => {
   console.log(JSON.stringify(sessions, null, 2));
+});
+
+getMovie(900).then(movie => {
+  console.log(JSON.stringify(movie, null, 2));
 });
